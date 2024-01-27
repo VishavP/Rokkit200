@@ -83,7 +83,7 @@ namespace Rokkit200.Services.Implementation
                         }
                         else 
                         {
-                            throw new Exception("Cannot withdraw more than available funds.");
+                            throw new Exception("Insufficient funds.");
                         }
                     }
                 }
