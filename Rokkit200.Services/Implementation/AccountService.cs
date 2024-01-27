@@ -40,7 +40,7 @@ namespace Rokkit200.Services.Implementation
                 }
                 else if (account.Account.AccountType == AccountType.CurrentAccount)
                 {
-
+                    account.Account.Balance += amountToDeposit;
                 }
             }
             catch (AccountNotFoundException)
@@ -64,7 +64,7 @@ namespace Rokkit200.Services.Implementation
                 }
                 if(account.Account.AccountType == AccountType.SavingsAccount)
                 {
-                    if(account.Account.Balance > 1000 + amountToWithdraw)
+                    if(account.Account.Balance - amountToWithdraw > 1000 )
                     {
                         account.Account.Balance -= amountToWithdraw;
                     }
@@ -75,7 +75,7 @@ namespace Rokkit200.Services.Implementation
                 }
                 else if(account.Account.AccountType == AccountType.CurrentAccount)
                 {
-                    if(account.Account.Balance - account.Account.Overdraft -  amountToWithdraw < 100000)
+                    if(account.Account.Balance - account.Account.Overdraft - amountToWithdraw < 100000)
                     {
                         if(amountToWithdraw > account.Account.Balance & account.Account.Balance < 0)
                         {
