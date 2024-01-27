@@ -60,7 +60,7 @@ namespace Rokkit200.Services.Implementation
                 Customer? account = systemDb.customers.FirstOrDefault(x => x.Account.AccountId == accountId);
                 if (account == null)
                 {
-                    throw new AccountNotFoundException();
+                    throw new AccountNotFoundException() { Message = "Account Not Found." };
                 }
                 if(account.Account.AccountType == AccountType.SavingsAccount)
                 {

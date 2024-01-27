@@ -8,5 +8,6 @@ namespace Rokkit200.Services.CustomExceptions
 {
     public class AccountNotFoundException : Exception
     {
+        public string Message { get; set; }
     }
 }
