@@ -3,13 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rokkit200", "Rokkit200\Rokkit200.csproj", "{3C0A7C73-BE87-4166-8925-A7660B917E75}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rokkit200.Services", "Rokkit200.Services\Rokkit200.Services.csproj", "{CF1F73A6-0FD7-4ACC-8DE5-CC143B25C6F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rokkit200.Models", "Rokkit200.Models\Rokkit200.Models.csproj", "{BECA76EC-0D89-4E53-8A9A-6354FECA867C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rokkit200.API", "Rokkit200.API\Rokkit200.API.csproj", "{950C5067-10FD-42EB-9E32-FF26AC13C667}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3C0A7C73-BE87-4166-8925-A7660B917E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C0A7C73-BE87-4166-8925-A7660B917E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C0A7C73-BE87-4166-8925-A7660B917E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C0A7C73-BE87-4166-8925-A7660B917E75}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF1F73A6-0FD7-4ACC-8DE5-CC143B25C6F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF1F73A6-0FD7-4ACC-8DE5-CC143B25C6F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF1F73A6-0FD7-4ACC-8DE5-CC143B25C6F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,10 +21,6 @@ Global
 		{BECA76EC-0D89-4E53-8A9A-6354FECA867C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BECA76EC-0D89-4E53-8A9A-6354FECA867C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BECA76EC-0D89-4E53-8A9A-6354FECA867C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{950C5067-10FD-42EB-9E32-FF26AC13C667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{950C5067-10FD-42EB-9E32-FF26AC13C667}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{950C5067-10FD-42EB-9E32-FF26AC13C667}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{950C5067-10FD-42EB-9E32-FF26AC13C667}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
