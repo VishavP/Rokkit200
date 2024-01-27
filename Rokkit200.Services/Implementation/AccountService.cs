@@ -12,7 +12,7 @@ namespace Rokkit200.Services.Implementation
         public void deposit(long accountId, int amountToDeposit)
         {
             throw new NotImplementedException();
-        }
+        } 
 
         public void openCurrentAccount(long accountId)
         {
