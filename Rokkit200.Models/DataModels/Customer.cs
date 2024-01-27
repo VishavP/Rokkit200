@@ -2,7 +2,8 @@
 {
     public class Customer
     {
-        public string customerNumber { get; set; }
+        public string customerNum { get; set; }
         public Int64 balance { get; set; }
+        public Int64 overdraft { get; set; }    
     }
 }
