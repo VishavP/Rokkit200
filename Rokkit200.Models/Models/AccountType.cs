@@ -8,6 +8,6 @@ namespace Rokkit200.Models.DataModels
 {
     public enum AccountType
     {
-        Cheque, Savings
+        CurrentAccount, SavingsAccount
     }
 }

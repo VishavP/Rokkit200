@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Rokkit200.Services\Rokkit200.Services.csproj" />
-  </ItemGroup>
-
 </Project>

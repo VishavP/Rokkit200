@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Rokkit200.Services.CustomExceptions;
 using Rokkit200.Models.DataModels;
+using Rokkit200.Models.Models;
 
 namespace Rokkit200.Services.Implementation
 {
@@ -28,7 +29,16 @@ namespace Rokkit200.Services.Implementation
         {
             try
             {
-                if(Syste)
+                Customer? account = systemDb.customers.FirstOrDefault(x => x.Account.AccountId == accountId);
+                if (account == null) throw new AccountNotFoundException();
+                if (account.Account.AccountType == AccountType.SavingsAccount)
+                {
+                    account.Account.Balance += amountToDeposit;
+                }
+                else if (account.Account.AccountType == AccountType.CurrentAccount)
+                {
+
+                }
             }
             catch (AccountNotFoundException)
             {
@@ -40,7 +50,6 @@ namespace Rokkit200.Services.Implementation
             }
         }
 
-
         public void withdraw(long accountId, int amountToWithdraw)
         {
             try
@@ -51,7 +60,7 @@ namespace Rokkit200.Services.Implementation
             {
                 throw;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
