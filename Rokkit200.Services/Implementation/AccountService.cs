@@ -77,21 +77,11 @@ namespace Rokkit200.Services.Implementation
                 {
                     if(account.Account.Balance - account.Account.Overdraft - amountToWithdraw < 100000)
                     {
-                        if(amountToWithdraw > account.Account.Balance & account.Account.Balance < 0)
+                        if(amountToWithdraw <= (account.Account.Balance + account.Account.Overdraft))
                         {
-                            account.Account.Balance = amountToWithdraw - account.Account.Balance;
-                            checked { amountToWithdraw -= (int)account.Account.Balance; }
-                            account.Account.Balance = 0;
-                            account.Account.Overdraft -= amountToWithdraw;
+                            account.Account.Balance -= amountToWithdraw;
                         }
-                        else if(amountToWithdraw > account.Account.Balance & account.Account.Balance > 0)
-                        {
-                            account.Account.Balance = amountToWithdraw - account.Account.Balance;
-                            checked { amountToWithdraw -= (int)account.Account.Balance; }
-                            account.Account.Balance = 0;
-                            account.Account.Overdraft -= amountToWithdraw;
-                        }
-                        else if(amountToWithdraw >= account.Account.Balance + account.Account.Overdraft)
+                        else 
                         {
                             throw new Exception("Cannot withdraw more than available funds.");
                         }
