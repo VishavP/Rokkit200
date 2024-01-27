@@ -33,7 +33,10 @@ namespace Rokkit200.Services.Implementation
                 if (account == null) throw new AccountNotFoundException();
                 if (account.Account.AccountType == AccountType.SavingsAccount)
                 {
-                    account.Account.Balance += amountToDeposit;
+                    if(amountToDeposit >= 1000)
+                    {
+                        account.Account.Balance += amountToDeposit;
+                    }
                 }
                 else if (account.Account.AccountType == AccountType.CurrentAccount)
                 {
@@ -54,7 +57,46 @@ namespace Rokkit200.Services.Implementation
         {
             try
             {
-
+                Customer? account = systemDb.customers.FirstOrDefault(x => x.Account.AccountId == accountId);
+                if (account == null)
+                {
+                    throw new AccountNotFoundException();
+                }
+                if(account.Account.AccountType == AccountType.SavingsAccount)
+                {
+                    if(account.Account.Balance > 1000 + amountToWithdraw)
+                    {
+                        account.Account.Balance -= amountToWithdraw;
+                    }
+                    else
+                    {
+                        throw new Exception("Insufficient funds. Account must have minimum of R1000.");
+                    }
+                }
+                else if(account.Account.AccountType == AccountType.CurrentAccount)
+                {
+                    if(account.Account.Balance - account.Account.Overdraft -  amountToWithdraw < 100000)
+                    {
+                        if(amountToWithdraw > account.Account.Balance & account.Account.Balance < 0)
+                        {
+                            account.Account.Balance = amountToWithdraw - account.Account.Balance;
+                            checked { amountToWithdraw -= (int)account.Account.Balance; }
+                            account.Account.Balance = 0;
+                            account.Account.Overdraft -= amountToWithdraw;
+                        }
+                        else if(amountToWithdraw > account.Account.Balance & account.Account.Balance > 0)
+                        {
+                            account.Account.Balance = amountToWithdraw - account.Account.Balance;
+                            checked { amountToWithdraw -= (int)account.Account.Balance; }
+                            account.Account.Balance = 0;
+                            account.Account.Overdraft -= amountToWithdraw;
+                        }
+                        else if(amountToWithdraw >= account.Account.Balance + account.Account.Overdraft)
+                        {
+                            throw new Exception("Cannot withdraw more than available funds.");
+                        }
+                    }
+                }
             }
             catch (AccountNotFoundException)
             {
