@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rokkit200.Services", "Rokki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rokkit200.Models", "Rokkit200.Models\Rokkit200.Models.csproj", "{BECA76EC-0D89-4E53-8A9A-6354FECA867C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rokkit200.Tests", "Rokkit200.Tests\Rokkit200.Tests.csproj", "{80443E81-5C7D-4B46-9DD4-5D7BB8A08B5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BECA76EC-0D89-4E53-8A9A-6354FECA867C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BECA76EC-0D89-4E53-8A9A-6354FECA867C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BECA76EC-0D89-4E53-8A9A-6354FECA867C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80443E81-5C7D-4B46-9DD4-5D7BB8A08B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80443E81-5C7D-4B46-9DD4-5D7BB8A08B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80443E81-5C7D-4B46-9DD4-5D7BB8A08B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80443E81-5C7D-4B46-9DD4-5D7BB8A08B5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
