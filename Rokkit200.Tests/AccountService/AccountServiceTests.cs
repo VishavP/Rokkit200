@@ -11,7 +11,7 @@ namespace Rokkit200.Tests.AccountServiceTest
     {
         private ILogger<AccountService> logger;
         private AccountService accountService;
-        private SystemDb  systemDb;
+        private SystemDb systemDb;
         
         [SetUp]
         public void OnSetup()
